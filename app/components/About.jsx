@@ -31,7 +31,7 @@ const About = () => {
  
         <div className='flex-1'>
           <p className='text-justify text-lg font-Ovo mb-10 max-w-2xl'>
-            Bachelor of Computer Science Education student at the Faculty of Computer Science, Brawijaya University, with a keen interest in programming, web development, and related disciplines. My academic journey has provided me with a solid foundation in both education and computer science.
+            Student at the Faculty of Computer Science, Brawijaya University, with a keen interest in programming, web development, and related disciplines. My academic journey has provided me with a solid foundation in both education and computer science.
           </p>
 
           <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
