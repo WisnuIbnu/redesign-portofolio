@@ -1,26 +1,136 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ================================ */
+/* Theme Colors using CSS Variables */
+/* ================================ */
+
+/* Dark Mode: biru dongker */
+html.dark {
+  --bg-color: #121B2E;       /* Background utama */
+  --text-color: #E4E6EB;     /* Warna teks terang */
+  --card-bg: #1F2A44;        /* Background kartu */
+  --nav-bg: #162139;         /* Background navbar */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Light Mode */
+html.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f9f9f9;
+  --nav-bg: #f0f0f0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ======================== */
+/* Apply theme colors global */
+/* ======================== */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ================= */
+/* Components styling */
+/* ================= */
+
+/* Card style */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+/* Navbar style */
+.navbar {
+  background-color: var(--nav-bg);
+}
+
+/* ===================== */
+/* Utility classes & hover */
+/* ===================== */
+
+.lightHover {
+  color: #fcf4ff;
+}
+
+.darkHover {
+  color: #2a004a;
+}
+
+.darkTheme {
+  color: #11001f;
+}
+
+.lightHover-background:hover {
+  background-color: #fcf4ff;
+}
+
+.darkHover-background:hover {
+  background-color: #2a004a;
+}
+
+.darkTheme-background:hover {
+  background-color: #11001f;
+}
+
+/* ==================== */
+/* Box shadow on hover */
+/* ==================== */
+
+.box-shadow-black:hover {
+  box-shadow: 4px 4px #000000;
+}
+
+.box-shadow-white:hover {
+  box-shadow: 4px 4px #ffffff;
+}
+
+/* =================== */
+/* Grid template utils */
+/* =================== */
+
+.gridTemplateColumns {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ================ */
+/* Animations */
+/* ================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
 }
