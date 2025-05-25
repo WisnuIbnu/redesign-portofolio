@@ -44,6 +44,7 @@ import raja_brawijaya_logo from './raja2.png';
 import lotte_scholarship_logo from './lotte.png';
 import filkom_logo from './fil-removebg-preview.png';
 import lps from './lps.png';
+import sewaId from '../assets/Portofolio/sewa-id.png'
 
 export const assets = {
     user_image,
@@ -91,9 +92,17 @@ export const assets = {
     raja_brawijaya_logo,
     lotte_scholarship_logo,
     lps,
+    sewaId
 };
 
 export const workData = [
+  {
+    title: 'SewaCar.id',
+    categories : 'Frond-End',
+    description: 'This is a weather detector website using OpenWeather API equipped with features such as current weather information, weather predictions, location-based search, and real-time data such as temperature, humidity, and wind speed. Designed to provide ease and informative experience for users.',
+    bgImage: sewaId,
+    demoUrl: 'https://sewa-car.vercel.app/',
+  },
   {
     title: 'Prediksi-Cuaca',
     categories : 'Weather Current',
@@ -115,36 +124,22 @@ export const workData = [
     bgImage: '/Portofolio/Front-end.png',
     demoUrl: 'https://github.com/AlViToo07/Hilinggg',
   },
-  {
-    title: 'FIA.ID',
-    categories : 'API',
-    description: 'My responsibility in this project is to develop API for two websites. This is the final assignment of the Integrated System Technology course. These APIs support various functions and ensure smooth communication between the front-end and back-end systems.',
-    bgImage: '/Portofolio/API-Project.png',
-    demoUrl: 'https://example.com/photography-portfolio',
-  },
 ];
 
 export const workDataS = [
+  {
+    title: 'SewaCar.id',
+    categories : 'Frond-End',
+    description: 'This is a weather detector website using OpenWeather API equipped with features such as current weather information, weather predictions, location-based search, and real-time data such as temperature, humidity, and wind speed. Designed to provide ease and informative experience for users.',
+    bgImage: sewaId,
+    demoUrl: 'https://sewa-car.vercel.app/',
+  },
   {
     title: 'Prediksi-Cuaca',
     categories : 'Weather Current',
     description: 'This is a weather detector website using OpenWeather API equipped with features such as current weather information, weather predictions, location-based search, and real-time data such as temperature, humidity, and wind speed. Designed to provide ease and informative experience for users.',
     bgImage: '/Portofolio/Prediksi-cuaca.png',
     demoUrl: 'https://prediksi-cuaca-yuuk.vercel.app/',
-  },
-  {
-    title: 'Saddam Drum Band',
-    categories : 'Web Design',
-    description: 'My role in developing the Saddam Drum Band website was as a programmer using React JS. This website is designed to make it easier for customers to find and buy drum band equipment, such as uniforms, shoes, hats and other accessories, including dusters. With React JS technology, I ensure a responsive, fast and intuitive user experience',
-    bgImage: '/Portofolio/sadam.png',
-    demoUrl: 'https://saddam-drum-band.vercel.app/',
-  },
-  {
-    title: 'Saddam Drum Band',
-    categories : 'Web Design',
-    description: 'My role in developing the Saddam Drum Band website was as a programmer using React JS. This website is designed to make it easier for customers to find and buy drum band equipment, such as uniforms, shoes, hats and other accessories, including dusters. With React JS technology, I ensure a responsive, fast and intuitive user experience',
-    bgImage: '/Portofolio/sadam.png',
-    demoUrl: 'https://saddam-drum-band.vercel.app/',
   },
   {
     title: 'Saddam Drum Band',
