@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect, useContext } from 'react';
-import { assets, workData } from '@/assets/assets'
+import { assets, workData, workDataS } from '@/assets/assets'
 import Image from 'next/image'
 import { ThemeContext } from '../context/ThemeContext';
 
@@ -129,34 +129,45 @@ const Portofolio = () => {
         During my time at the college, I have worked on several projects that are interesting and relevant to my field of study.
       </p>
 
-      <div className='grid grid-cols-1 sm:grid-cols-4 gap-5'>
-        {workData.map((project, index) => {
-
-          const sendIcon = theme === 'dark' ? assets.send_icon_dark : assets.send_icon 
-          const bgCard = theme === 'dark' ? 'bg-[#1F2A44]' : 'bg-white'
-          const bgSendIcon = theme  === 'dark' ? 'border-white shadow-[2px_2px_0_#fff] group-hover:shadow-[3px_3px_0_#fff]' : 'border-black shadow-[2px_2px_0_#000] group-hover:shadow-[3px_3px_0_#000]'
-          return (
-          <div 
-            className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden transition-transform duration-300 hover:scale-[1.02]'
-            key={index}
-            style={{ backgroundImage: `url(${project.bgImage})` }}
-            onClick={() => openModal(project)}
-          >
-            {/* Gradient overlay */}
-            <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-            
-            {/* Content card with bounce effect */}
-            <div className={`${bgCard} w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 transition-all hover:shadow-xl`}>
-              <div>
-                <h2 className='font-semibold  group-hover:text-lime-600 transition-colors duration-300'>{project.title}</h2>
-                <p className='text-sm transition-colors duration-300'>{project.categories}</p>
-              </div>
-              <div className={`border rounded-full w-8 aspect-square flex items-center justify-center  group-hover:bg-lime-500 group-hover:-translate-y-0.5 transition-all duration-300 ${bgSendIcon}`}> 
-                <Image src={sendIcon} alt='' className='w-5 group-hover:rotate-12 transition-transform duration-300' />
-              </div>
-            </div>
-          </div>
-        )})}
+     <div className='grid grid-cols-1 sm:grid-cols-4 gap-5'>
+         {workDataS.map((project, index) => {
+           const sendIcon = theme === 'dark' ? assets.send_icon_dark : assets.send_icon;
+           const bgCard = theme === 'dark' ? 'bg-[#1F2A44]' : 'bg-white';
+           const bgSendIcon = theme === 'dark'
+             ? 'border-white shadow-[2px_2px_0_#fff] group-hover:shadow-[3px_3px_0_#fff]'
+             : 'border-black shadow-[2px_2px_0_#000] group-hover:shadow-[3px_3px_0_#000]';
+ 
+           return (
+             <div 
+               className='aspect-square relative rounded-lg overflow-hidden cursor-pointer group transition-transform duration-300 hover:scale-[1.02]'
+               key={index}
+               onClick={() => openModal(project)}
+             >
+               {/* Gambar background */}
+               <Image
+                 src={project.bgImage}
+                 alt={project.title || 'Project image'}
+                 fill
+                 className="object-cover object-center"
+                 priority
+               />
+ 
+               {/* Gradient overlay */}
+               <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+ 
+               {/* Content card */}
+               <div className={`${bgCard} w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 transition-all hover:shadow-xl`}>
+                 <div>
+                   <h2 className='font-semibold group-hover:text-lime-600 transition-colors duration-300'>{project.title}</h2>
+                   <p className='text-sm transition-colors duration-300'>{project.categories}</p>
+                 </div>
+                 <div className={`border rounded-full w-8 aspect-square flex items-center justify-center group-hover:bg-lime-500 group-hover:-translate-y-0.5 transition-all duration-300 ${bgSendIcon}`}> 
+                   <Image src={sendIcon} alt='' className='w-5 group-hover:rotate-12 transition-transform duration-300' />
+                 </div>
+               </div>
+             </div>
+           );
+           })}
       </div>
 
       <a href="/">
