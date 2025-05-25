@@ -142,7 +142,7 @@ export const workDataS = [
     demoUrl: 'https://prediksi-cuaca-yuuk.vercel.app/',
   },
   {
-    title: 'Saddam Drum Band',
+    title: 'Saddam-Store',
     categories : 'Web Design',
     description: 'My role in developing the Saddam Drum Band website was as a programmer using React JS. This website is designed to make it easier for customers to find and buy drum band equipment, such as uniforms, shoes, hats and other accessories, including dusters. With React JS technology, I ensure a responsive, fast and intuitive user experience',
     bgImage: '/Portofolio/sadam.png',
