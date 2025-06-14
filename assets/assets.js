@@ -177,13 +177,13 @@ export const workDataS = [
     bgImage: '/Portofolio/API-Project.png',
     demoUrl: 'https://example.com/photography-portfolio',
   },
-   {
-    title: 'Larana Reto',
-    categories : 'Frond-End',
-    description: 'Larana Reto is a website that provides a platform for users to share and discover various types of content, such as articles, images, and videos. The website is designed to be user-friendly and visually appealing, with features that allow users to easily navigate and interact with the content. It aims to create a community where users can connect and engage with each other through shared interests.',
-    bgImage: larana_app,
-    demoUrl: 'https://kantinq.vercel.app/',
-  },
+  //  {
+  //   title: 'Larana Reto',
+  //   categories : 'Frond-End',
+  //   description: 'Larana Reto is a website that provides a platform for users to share and discover various types of content, such as articles, images, and videos. The website is designed to be user-friendly and visually appealing, with features that allow users to easily navigate and interact with the content. It aims to create a community where users can connect and engage with each other through shared interests.',
+  //   bgImage: larana_app,
+  //   demoUrl: 'https://kantinq.vercel.app/',
+  // },
 ];
 
 export const serviceData = [
