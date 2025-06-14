@@ -4,8 +4,9 @@ import { assets, workData, workDataS } from '@/assets/assets'
 import Image from 'next/image'
 import { ThemeContext } from '../context/ThemeContext';
 
-const ProjectModal = ({ project, isOpen, onClose, theme  }) => {
+const ProjectModal = ({ project, isOpen, onClose }) => {
   const [bgImage, setBgImage] = useState(null);
+  const { theme } = useContext(ThemeContext)
 
   useEffect(() => {
     setBgImage(project.bgImage);
@@ -59,13 +60,13 @@ const ProjectModal = ({ project, isOpen, onClose, theme  }) => {
         {/* Konten dengan efek fade-in */}
         <div className="p-6 md:p-8">
           <div className=" space-y-4">
-            <h2 className="text-3xl font-bold mb-2 animate-fadeIn text-black">
+            <h2 className="text-3xl font-bold mb-2 animate-fadeIn ">
               {project.title}
             </h2>
-            <p className=" mb-2 animate-fadeIn delay-100 text-black">
+            <p className=" mb-2 animate-fadeIn delay-100 ">
               {project.categories}
             </p>
-            <p className="mb-6 text-xs sm:text-sm animate-fadeIn delay-100 text-black">
+            <p className="mb-6 text-xs sm:text-sm animate-fadeIn delay-100 ">
               {project.description}
             </p>
           </div>

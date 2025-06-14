@@ -4,14 +4,15 @@ import { assets, workData } from '@/assets/assets'
 import Image from 'next/image'
 import { ThemeContext } from '../context/ThemeContext';
 
-const ProjectModal = ({ project, isOpen, onClose, theme }) => {
+const ProjectModal = ({ project, isOpen, onClose }) => {
   const [bgImage, setBgImage] = useState(null);
+
+  const { theme } = useContext(ThemeContext)
 
   useEffect(() => {
     setBgImage(project.bgImage);
   }, [project.bgImage]);
 
-  const bgModal = theme === 'dark' ? 'bg-[#1F2A44]' : 'bg-white'
   const liveDemo = theme === 'dark' ? ' bg-slate-800 text-sky-600 border-2 hover:bg-white border-sky-600' : 'text-sky-600 border-sky-600 border-2 hover:bg-slate-800 hover:text-white'
 
   if (!bgImage) return null; 
@@ -24,9 +25,11 @@ const ProjectModal = ({ project, isOpen, onClose, theme }) => {
       />
       
       {/* Modal container dengan animasi scale */}
-      <div className={`relative w-full max-w-lg ${bgModal} rounded-xl overflow-hidden shadow-2xl font-Ovo transform transition-all duration-300 ${isOpen ? 'scale-100' : 'scale-95'}`}>
+      <div className={`relative w-full max-w-lg  rounded-xl overflow-hidden shadow-2xl font-Ovo transform transition-all duration-300
+      ${theme === 'dark' ? 'bg-[#1F2A44] text-white' : 'bg-white text-black'}  
+      ${isOpen ? 'scale-100' : 'scale-95'}`}>
         {/* Header dengan efek parallax */}
-        <div className="relative h-64 bg-gray-100 overflow-hidden group">
+        <div className={`relative h-64 bg-gray-100 overflow-hidden group`}>
           <Image
             src={bgImage}
             alt={project.title || 'Project image'}
@@ -58,13 +61,13 @@ const ProjectModal = ({ project, isOpen, onClose, theme }) => {
         {/* Konten dengan efek fade-in */}
         <div className="p-6 md:p-8">
           <div className=" space-y-4">
-            <h2 className="text-3xl font-bold mb-2  text-black">
+            <h2 className="text-3xl font-bold mb-2 ">
               {project.title}
             </h2>
-            <p className=" mb-2  text-black">
+            <p className=" mb-2  ">
               {project.categories}
             </p>
-            <p className="mb-6 text-xs sm:text-sm  text-black ">
+            <p className="mb-6 text-xs sm:text-sm  ">
               {project.description}
             </p>
           </div>
