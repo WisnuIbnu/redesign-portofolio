@@ -28,9 +28,9 @@ const Footer = () => {
       <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-10 py-6'>
         <p>@ 2025 Wisnu Ibnu. All right reserved.</p>
         <ul className='flex gap-10 mt-4 items-center justify-center sm:mt-0'>
-          <li><a target='_blank' href="www.google.com"></a>Github</li>
-          <li><a target='_blank' href="www.google.com"></a>LinkedIn</li>
-          <li><a target='_blank' href="www.google.com"></a>X</li>
+          <li><a target='_blank' href="https://github.com/WisnuIbnu" rel="noopener noreferrer">Github</a></li>
+          <li><a target='_blank' href="https://github.com/WisnuIbnu" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a target='_blank' href="https://github.com/WisnuIbnu" rel="noopener noreferrer">X</a></li>
         </ul>
       </div>
     </div>

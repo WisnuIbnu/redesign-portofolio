@@ -11,7 +11,7 @@ import { ThemeContext } from '../context/ThemeContext'
 const Contact = () => {
 
 const socialMedia = [
-    { name: 'WhatsApp', icon: faWhatsapp, account: 'Wisnu Ibnu' , color: '#008a29', link: 'https://api.whatsapp.com/send/?phone=6285893953426&text=Halo%2C%20saya%20tertarik%20untuk%20berbicara%20lebih%20lanjut%21' , massage:'Send Me A Massage'},
+    { name: 'WhatsApp', icon: faWhatsapp, account: 'Wisnu Ibnu' , color: '#0ebe31', link: 'https://api.whatsapp.com/send/?phone=6285893953426&text=Halo%2C%20saya%20tertarik%20untuk%20berbicara%20lebih%20lanjut%21' , massage:'Send Me A Massage'},
     { name: 'Email', icon: faEnvelope, account: 'wisnuiben21@gmail.com' , color: '#a7061e', link: 'https://mail.google.com/mail/u/0/?fs=1&to=wisnuiben21@gmail.com&su=Your%20Subject&body=Your%20Messages&tf=cm', massage:'Send Me A Massage' },
     { name: 'Line', icon: faLine, account: 'Wisnu Ibnu' ,color: '#0ebe31', link: 'https://line.me/R/ti/p/wisnuibnu21?text=Halo%2C%20saya%20tertarik%20untuk%20berbicara%20lebih%20lanjut%21', massage:'Send Me A Massage' },    
 ];

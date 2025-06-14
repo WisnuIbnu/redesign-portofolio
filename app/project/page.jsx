@@ -4,7 +4,7 @@ import { assets, workData, workDataS } from '@/assets/assets'
 import Image from 'next/image'
 import { ThemeContext } from '../context/ThemeContext';
 
-const ProjectModal = ({ project, isOpen, onClose }) => {
+const ProjectModal = ({ project, isOpen, onClose, theme  }) => {
   const [bgImage, setBgImage] = useState(null);
 
   useEffect(() => {
@@ -12,8 +12,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   }, [project.bgImage]);
 
   if (!bgImage) return null; 
-
-  const { theme } = useContext(ThemeContext)
 
   const bgModal = theme === 'dark' ? 'bg-[#1F2A44]' : 'bg-white'
   const liveDemo = theme === 'dark' ? ' bg-slate-800 text-sky-600 border-2 hover:bg-white border-sky-600' : 'text-sky-600 border-sky-600 border-2 hover:bg-slate-800 hover:text-white'
@@ -61,13 +59,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         {/* Konten dengan efek fade-in */}
         <div className="p-6 md:p-8">
           <div className=" space-y-4">
-            <h2 className="text-3xl font-bold mb-2 animate-fadeIn">
+            <h2 className="text-3xl font-bold mb-2 animate-fadeIn text-black">
               {project.title}
             </h2>
-            <p className=" mb-2 animate-fadeIn delay-100">
+            <p className=" mb-2 animate-fadeIn delay-100 text-black">
               {project.categories}
             </p>
-            <p className="mb-6 text-xs sm:text-sm animate-fadeIn delay-100">
+            <p className="mb-6 text-xs sm:text-sm animate-fadeIn delay-100 text-black">
               {project.description}
             </p>
           </div>
@@ -171,7 +169,7 @@ const Portofolio = () => {
       </div>
 
       <a href="/">
-        <button className='w-max flex items-center justify-center gap-2 border-[0.5px] rounded-full py-3 px-6 mx-auto my-20 lightHover-background transition duration-500 cursor-pointer'>
+        <button className={`w-max flex items-center justify-center gap-2 border-[0.5px] rounded-full py-3 px-6 mx-auto my-20 lightHover-background transition duration-500 cursor-pointer ${theme === 'dark' ? ' text-white hover:text-slate-900' : ' text-black'}`}>
           Back To Main<Image src={iconRight} alt='' className='w-4' />
         </button>
       </a>

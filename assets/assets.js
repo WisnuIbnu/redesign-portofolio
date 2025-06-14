@@ -13,7 +13,6 @@ import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo_wisnu.png';
 import logo_dark from './logo_wisnu_dark.png';
-import laravel from './laravel-original.svg';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './wisnu.jpg';
@@ -45,6 +44,10 @@ import lotte_scholarship_logo from './lotte.png';
 import filkom_logo from './fil-removebg-preview.png';
 import lps from './lps.png';
 import sewaId from '../assets/Portofolio/sewa-id.png'
+import quranApp from '../assets/Portofolio/quran-app.png';
+import larana_app from '../assets/Portofolio/larana-app.png';
+import saddam_app from '../assets/Portofolio/sadam.png';
+import prediksi_cuaca from '../assets/Portofolio/Prediksi-cuaca.png';
 
 export const assets = {
     user_image,
@@ -92,14 +95,25 @@ export const assets = {
     raja_brawijaya_logo,
     lotte_scholarship_logo,
     lps,
-    sewaId
+    sewaId,
+    quranApp,
+    larana_app,
+    saddam_app,
+    prediksi_cuaca
 };
 
 export const workData = [
   {
+    title: 'Quran App',
+    categories : 'Frond-End',
+    description: 'A Quran application is a digital platform that provides access to the Quran, the holy book of Islam. It typically includes features such as text display, audio recitation, translation, and search functionality. The app aims to facilitate reading, understanding, and memorizing the Quran for users worldwide.',
+    bgImage: quranApp,
+    demoUrl: 'https://quran-app-navy.vercel.app/quran',
+  },
+  {
     title: 'SewaCar.id',
     categories : 'Frond-End',
-    description: 'This is a weather detector website using OpenWeather API equipped with features such as current weather information, weather predictions, location-based search, and real-time data such as temperature, humidity, and wind speed. Designed to provide ease and informative experience for users.',
+    description: 'A final project of subject perancangan antarmuka pengguna is a car rental website that allows users to easily rent cars online. The website is designed to provide a user-friendly experience, with features such as car selection, booking, and payment processing. It aims to simplify the car rental process and enhance customer convenience.',
     bgImage: sewaId,
     demoUrl: 'https://sewa-car.vercel.app/',
   },
@@ -107,30 +121,31 @@ export const workData = [
     title: 'Prediksi-Cuaca',
     categories : 'Weather Current',
     description: 'This is a weather detector website using OpenWeather API equipped with features such as current weather information, weather predictions, location-based search, and real-time data such as temperature, humidity, and wind speed. Designed to provide ease and informative experience for users.',
-    bgImage: '/Portofolio/Prediksi-cuaca.png',
+    bgImage: prediksi_cuaca,
     demoUrl: 'https://prediksi-cuaca-yuuk.vercel.app/',
   },
-  {
+    {
     title: 'Saddam-Store',
     categories : 'Web Design',
     description: 'My role in developing the Saddam Drum Band website was as a programmer using React JS. This website is designed to make it easier for customers to find and buy drum band equipment, such as uniforms, shoes, hats and other accessories, including dusters. With React JS technology, I ensure a responsive, fast and intuitive user experience',
-    bgImage: '/Portofolio/sadam.png',
+    bgImage: saddam_app,
     demoUrl: 'https://saddam-drum-band.vercel.app/',
-  },
-  {
-    title: 'TravelingYuk',
-    categories : 'Front-End',
-    description: 'I am responsible for designing an attractive, responsive, and aesthetic front-end. This is the final project of the PHP Website Programming course, with a focus on modern appearance and ease of navigation for users. I also ensure that the visual elements support the overall functionality of the site.',
-    bgImage: '/Portofolio/Front-end.png',
-    demoUrl: 'https://github.com/AlViToo07/Hilinggg',
   },
 ];
 
 export const workDataS = [
+   
+  {
+    title: 'Quran App',
+    categories : 'Frond-End',
+    description: 'A Quran application is a digital platform that provides access to the Quran, the holy book of Islam. It typically includes features such as text display, audio recitation, translation, and search functionality. The app aims to facilitate reading, understanding, and memorizing the Quran for users worldwide.',
+    bgImage: quranApp,
+    demoUrl: 'https://quran-app-navy.vercel.app/quran',
+  },
   {
     title: 'SewaCar.id',
     categories : 'Frond-End',
-    description: 'This is a weather detector website using OpenWeather API equipped with features such as current weather information, weather predictions, location-based search, and real-time data such as temperature, humidity, and wind speed. Designed to provide ease and informative experience for users.',
+    description: 'A final project of subject perancangan antarmuka pengguna is a car rental website that allows users to easily rent cars online. The website is designed to provide a user-friendly experience, with features such as car selection, booking, and payment processing. It aims to simplify the car rental process and enhance customer convenience.',
     bgImage: sewaId,
     demoUrl: 'https://sewa-car.vercel.app/',
   },
@@ -138,14 +153,14 @@ export const workDataS = [
     title: 'Prediksi-Cuaca',
     categories : 'Weather Current',
     description: 'This is a weather detector website using OpenWeather API equipped with features such as current weather information, weather predictions, location-based search, and real-time data such as temperature, humidity, and wind speed. Designed to provide ease and informative experience for users.',
-    bgImage: '/Portofolio/Prediksi-cuaca.png',
+    bgImage: prediksi_cuaca,
     demoUrl: 'https://prediksi-cuaca-yuuk.vercel.app/',
   },
   {
     title: 'Saddam-Store',
     categories : 'Web Design',
     description: 'My role in developing the Saddam Drum Band website was as a programmer using React JS. This website is designed to make it easier for customers to find and buy drum band equipment, such as uniforms, shoes, hats and other accessories, including dusters. With React JS technology, I ensure a responsive, fast and intuitive user experience',
-    bgImage: '/Portofolio/sadam.png',
+    bgImage: saddam_app,
     demoUrl: 'https://saddam-drum-band.vercel.app/',
   },
   {
@@ -161,6 +176,13 @@ export const workDataS = [
     description: 'My responsibility in this project is to develop API for two websites. This is the final assignment of the Integrated System Technology course. These APIs support various functions and ensure smooth communication between the front-end and back-end systems.',
     bgImage: '/Portofolio/API-Project.png',
     demoUrl: 'https://example.com/photography-portfolio',
+  },
+   {
+    title: 'Larana Reto',
+    categories : 'Frond-End',
+    description: 'Larana Reto is a website that provides a platform for users to share and discover various types of content, such as articles, images, and videos. The website is designed to be user-friendly and visually appealing, with features that allow users to easily navigate and interact with the content. It aims to create a community where users can connect and engage with each other through shared interests.',
+    bgImage: larana_app,
+    demoUrl: 'https://kantinq.vercel.app/',
   },
 ];
 
