@@ -48,6 +48,7 @@ import quranApp from '../assets/Portofolio/quran-app.png';
 import larana_app from '../assets/Portofolio/larana-app.png';
 import saddam_app from '../assets/Portofolio/sadam.png';
 import prediksi_cuaca from '../assets/Portofolio/Prediksi-cuaca.png';
+import almatsurat from '../assets/Portofolio/almatsurat-api.png';
 
 export const assets = {
     user_image,
@@ -99,10 +100,18 @@ export const assets = {
     quranApp,
     larana_app,
     saddam_app,
-    prediksi_cuaca
+    prediksi_cuaca,
+    almatsurat,
 };
 
 export const workData = [
+  {
+    title: 'Al-Matsurat API',
+    categories : 'API-Next.JS',
+    description: 'Al-Matsurat API is a web service that provides access to the Al-Matsurat prayer book, which contains daily prayers and supplications for Muslims. This API allows developers to integrate Al-Matsurat content into their applications, enabling users to access and read the prayers conveniently.',
+    bgImage: almatsurat,
+    demoUrl: 'https://almatsurat-fawn.vercel.app/',
+  },
   {
     title: 'Quran App',
     categories : 'Frond-End',
@@ -124,17 +133,16 @@ export const workData = [
     bgImage: prediksi_cuaca,
     demoUrl: 'https://prediksi-cuaca-yuuk.vercel.app/',
   },
-    {
-    title: 'Saddam-Store',
-    categories : 'Web Design',
-    description: 'My role in developing the Saddam Drum Band website was as a programmer using React JS. This website is designed to make it easier for customers to find and buy drum band equipment, such as uniforms, shoes, hats and other accessories, including dusters. With React JS technology, I ensure a responsive, fast and intuitive user experience',
-    bgImage: saddam_app,
-    demoUrl: 'https://saddam-drum-band.vercel.app/',
-  },
 ];
 
 export const workDataS = [
-   
+  {
+    title: 'Al-Matsurat API',
+    categories : 'API-Next.JS',
+    description: 'Al-Matsurat API is a web service that provides access to the Al-Matsurat prayer book, which contains daily prayers and supplications for Muslims. This API allows developers to integrate Al-Matsurat content into their applications, enabling users to access and read the prayers conveniently.',
+    bgImage: almatsurat,
+    demoUrl: 'https://almatsurat-fawn.vercel.app/',
+  },
   {
     title: 'Quran App',
     categories : 'Frond-End',
@@ -213,7 +221,7 @@ export const experienceData = [
             'Taught 38 students about Java basic programming',
             'Conducted practicum sessions and provided practicum feedback and assessment'
         ],
-        logo: assets.filkom_logo // Pastikan file ada di public/images/
+        logo: assets.filkom_logo 
     },
     {
         title: 'Faculty Of Computer Science (FILKOM UB)',
