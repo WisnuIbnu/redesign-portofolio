@@ -1,24 +1,47 @@
 'use client'
 import { useState, useEffect, useContext } from 'react';
-import { assets, workData, workDataS } from '@/assets/assets'
+import { assets, workDataS } from '@/assets/assets'
 import Image from 'next/image'
 import { ThemeContext } from '../context/ThemeContext';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 1,
+      ease: 'easeOut'
+    }
+  })
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1 } }
+};
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   const [bgImage, setBgImage] = useState(null);
+
   const { theme } = useContext(ThemeContext)
 
   useEffect(() => {
     setBgImage(project.bgImage);
   }, [project.bgImage]);
 
-  if (!bgImage) return null; 
-
-  const bgModal = theme === 'dark' ? 'bg-[#1F2A44]' : 'bg-white'
   const liveDemo = theme === 'dark' ? ' bg-slate-800 text-sky-600 border-2 hover:bg-white border-sky-600' : 'text-sky-600 border-sky-600 border-2 hover:bg-slate-800 hover:text-white'
 
+  if (!bgImage) return null; 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+    <motion.div
+      initial="hidden"
+      animate={isOpen ? "visible" : "hidden"}
+      variants={fadeIn}
+      className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+    >
       {/* Background overlay dengan transparansi 50% */}
       <div 
         className="absolute inset-0 backdrop-blur-sm transition-opacity duration-500"
@@ -26,9 +49,16 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       />
       
       {/* Modal container dengan animasi scale */}
-      <div className={`relative w-full max-w-lg ${bgModal} rounded-xl overflow-hidden shadow-2xl font-Ovo transform transition-all duration-300 ${isOpen ? 'scale-100' : 'scale-95'}`}>
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={isOpen ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className={`relative w-full max-w-lg  rounded-xl overflow-hidden shadow-2xl font-Ovo transform transition-all duration-300
+        ${theme === 'dark' ? 'bg-[#1F2A44] text-white' : 'bg-white text-black'}  
+        ${isOpen ? 'scale-100' : 'scale-95'}`}
+      >
         {/* Header dengan efek parallax */}
-        <div className="relative h-64 bg-gray-100 overflow-hidden group">
+        <div className={`relative h-64 bg-gray-100 overflow-hidden group`}>
           <Image
             src={bgImage}
             alt={project.title || 'Project image'}
@@ -60,17 +90,17 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         {/* Konten dengan efek fade-in */}
         <div className="p-6 md:p-8">
           <div className=" space-y-4">
-            <h2 className="text-3xl font-bold mb-2 animate-fadeIn ">
+            <h2 className="text-3xl font-bold mb-2 ">
               {project.title}
             </h2>
-            <p className=" mb-2 animate-fadeIn delay-100 ">
+            <p className=" mb-2  ">
               {project.categories}
             </p>
-            <p className="mb-6 text-xs sm:text-sm animate-fadeIn delay-100 ">
+            <p className="mb-6 text-xs sm:text-sm  ">
               {project.description}
             </p>
           </div>
-          <div className=" flex flex-row gap-4 animate-fadeIn delay-400">
+          <div className=" flex flex-row gap-4">
               {project.demoUrl && (
                 <a
                   href={project.demoUrl}
@@ -90,8 +120,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </button>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
@@ -116,64 +146,99 @@ const Portofolio = () => {
     }
   }, [isModalOpen]);
 
-    const { theme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
 
-    const iconRight = theme === 'dark' ? assets.right_arrow_bold_dark : assets.right_arrow_bold
+  const iconRight = theme === 'dark' ? assets.right_arrow_bold_dark : assets.right_arrow_bold
   return (
-    <div id="portofolio" className='w-full px-[12%] py-12 scroll-m-20'>
-      <h4 className='text-center mb-2 text-lg font-Ovo mt-20'>Portofolio</h4>
-      <h2 className='text-center text-5xl font-Ovo'>My Latest Project</h2>
+    <motion.div
+      id="portofolio"
+      className='w-full px-[12%] py-12 scroll-m-20'
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeIn}
+    >
+      <motion.h4
+        className='text-center mb-2 text-lg font-Ovo mt-20'
+        variants={fadeInUp}
+        custom={0}
+      >
+        Portofolio
+      </motion.h4>
+      <motion.h2
+        className='text-center text-5xl font-Ovo'
+        variants={fadeInUp}
+        custom={0.2}
+      >
+        My Latest Project
+      </motion.h2>
 
-      <p className='text-center max-w-2xl mx-auto text-lg mt-5 mb-12 font-Ovo'>
+      <motion.p
+        className='text-center max-w-2xl mx-auto text-lg mt-5 mb-12 font-Ovo'
+        variants={fadeInUp}
+        custom={0.4}
+      >
         During my time at the college, I have worked on several projects that are interesting and relevant to my field of study.
-      </p>
+      </motion.p>
 
-     <div className='grid grid-cols-1 sm:grid-cols-4 gap-5'>
-         {workDataS.map((project, index) => {
-           const sendIcon = theme === 'dark' ? assets.send_icon_dark : assets.send_icon;
-           const bgCard = theme === 'dark' ? 'bg-[#1F2A44]' : 'bg-white';
-           const bgSendIcon = theme === 'dark'
-             ? 'border-white shadow-[2px_2px_0_#fff] group-hover:shadow-[3px_3px_0_#fff]'
-             : 'border-black shadow-[2px_2px_0_#000] group-hover:shadow-[3px_3px_0_#000]';
- 
-           return (
-             <div 
-               className='aspect-square relative rounded-lg overflow-hidden cursor-pointer group transition-transform duration-300 hover:scale-[1.02]'
-               key={index}
-               onClick={() => openModal(project)}
-             >
-               {/* Gambar background */}
-               <Image
-                 src={project.bgImage}
-                 alt={project.title || 'Project image'}
-                 fill
-                 className="object-cover object-center"
-                 priority
-               />
- 
-               {/* Gradient overlay */}
-               <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
- 
-               {/* Content card */}
-               <div className={`${bgCard} w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 transition-all hover:shadow-xl`}>
-                 <div>
-                   <h2 className='font-semibold group-hover:text-lime-600 transition-colors duration-300'>{project.title}</h2>
-                   <p className='text-sm transition-colors duration-300'>{project.categories}</p>
-                 </div>
-                 <div className={`border rounded-full w-8 aspect-square flex items-center justify-center group-hover:bg-lime-500 group-hover:-translate-y-0.5 transition-all duration-300 ${bgSendIcon}`}> 
-                   <Image src={sendIcon} alt='' className='w-5 group-hover:rotate-12 transition-transform duration-300' />
-                 </div>
-               </div>
-             </div>
-           );
-           })}
+      <div className='grid grid-cols-1 sm:grid-cols-4 gap-5'>
+        {workDataS.map((project, index) => {
+          const sendIcon = theme === 'dark' ? assets.send_icon_dark : assets.send_icon;
+          const bgCard = theme === 'dark' ? 'bg-[#1F2A44]' : 'bg-white';
+          const bgSendIcon = theme === 'dark'
+            ? 'border-white shadow-[2px_2px_0_#fff] group-hover:shadow-[3px_3px_0_#fff]'
+            : 'border-black shadow-[2px_2px_0_#000] group-hover:shadow-[3px_3px_0_#000]';
+
+          return (
+            <motion.div
+              className='aspect-square relative rounded-lg overflow-hidden cursor-pointer group transition-transform duration-300 hover:scale-[1.02]'
+              key={index}
+              onClick={() => openModal(project)}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              custom={index * 0.2 + 0.5}
+            >
+              {/* Gambar background */}
+              <Image
+                src={project.bgImage}
+                alt={project.title || 'Project image'}
+                fill
+                className="object-cover object-center"
+                priority
+              />
+
+              {/* Gradient overlay */}
+              <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+
+              {/* Content card */}
+              <div className={`${bgCard} w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 transition-all hover:shadow-xl`}>
+                <div>
+                  <h2 className='font-semibold group-hover:text-lime-600 transition-colors duration-300'>{project.title}</h2>
+                  <p className='text-sm transition-colors duration-300'>{project.categories}</p>
+                </div>
+                <div className={`border rounded-full w-8 aspect-square flex items-center justify-center group-hover:bg-lime-500 group-hover:-translate-y-0.5 transition-all duration-300 ${bgSendIcon}`}> 
+                  <Image src={sendIcon} alt='' className='w-5 group-hover:rotate-12 transition-transform duration-300' />
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
 
-      <a href="/">
-        <button className={`w-max flex items-center justify-center gap-2 border-[0.5px] rounded-full py-3 px-6 mx-auto my-20 lightHover-background transition duration-500 cursor-pointer ${theme === 'dark' ? ' text-white hover:text-slate-900' : ' text-black'}`}>
+      <motion.a
+        href="/"
+        variants={fadeInUp}
+        custom={2}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <button className='w-max flex items-center justify-center gap-2 border-[0.5px] rounded-full py-3 px-6 mx-auto my-20 lightHover-background transition duration-500 cursor-pointer'>
           Back To Main<Image src={iconRight} alt='' className='w-4' />
         </button>
-      </a>
+      </motion.a>
 
       {selectedProject && (
         <ProjectModal 
@@ -182,7 +247,7 @@ const Portofolio = () => {
           onClose={closeModal} 
         />
       )}
-    </div>
+    </motion.div>
   );
 }
 

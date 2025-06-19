@@ -27,19 +27,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">
-      <head>
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-      </head>
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden`}
       >
-      <ThemeContextProvider>
-        <ThemeWrapper>
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeWrapper>
-      </ThemeContextProvider>
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <ThemeContextProvider>
+          <ThemeWrapper>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeWrapper>
+        </ThemeContextProvider>
       </body>
     </html>
   );
