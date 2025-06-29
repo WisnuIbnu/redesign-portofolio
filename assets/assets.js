@@ -102,9 +102,17 @@ export const assets = {
     saddam_app,
     prediksi_cuaca,
     almatsurat,
+    larana_app
 };
 
 export const workData = [
+  {
+    title: 'Larana Resto',
+    categories: 'Front-End',
+    description: 'Larana Resto is a restaurant website developed as the final project for the Perancangan Antarmuka Pengguna (PAP) course. It allows users to browse menus, place orders, and view restaurant information. The site is designed for a seamless and visually appealing user experience, with responsive layouts and intuitive navigation. Features include menu browsing, order placement, and contact information.',
+    bgImage: larana_app,
+    demoUrl: 'https://larana-resto.vercel.app/',
+  },
   {
     title: 'Al-Matsurat API',
     categories : 'API-Next.JS',
@@ -117,7 +125,7 @@ export const workData = [
     categories : 'Frond-End',
     description: 'A Quran application is a digital platform that provides access to the Quran, the holy book of Islam. It typically includes features such as text display, audio recitation, translation, and search functionality. The app aims to facilitate reading, understanding, and memorizing the Quran for users worldwide.',
     bgImage: quranApp,
-    demoUrl: 'https://quran-app-navy.vercel.app/quran',
+    demoUrl: 'https://quran-app-navy.vercel.app/',
   },
   {
     title: 'SewaCar.id',
@@ -126,16 +134,16 @@ export const workData = [
     bgImage: sewaId,
     demoUrl: 'https://sewa-car.vercel.app/',
   },
-  {
-    title: 'Prediksi-Cuaca',
-    categories : 'Weather Current',
-    description: 'This is a weather detector website using OpenWeather API equipped with features such as current weather information, weather predictions, location-based search, and real-time data such as temperature, humidity, and wind speed. Designed to provide ease and informative experience for users.',
-    bgImage: prediksi_cuaca,
-    demoUrl: 'https://prediksi-cuaca-yuuk.vercel.app/',
-  },
 ];
 
 export const workDataS = [
+  {
+    title: 'Larana Resto',
+    categories: 'Front-End',
+    description: 'Larana Resto is a restaurant website developed as the final project for the Perancangan Antarmuka Pengguna (PAP) course. It allows users to browse menus, place orders, and view restaurant information. The site is designed for a seamless and visually appealing user experience, with responsive layouts and intuitive navigation. Features include menu browsing, order placement, and contact information.',
+    bgImage: larana_app,
+    demoUrl: 'https://larana-resto.vercel.app/',
+  },
   {
     title: 'Al-Matsurat API',
     categories : 'API-Next.JS',
