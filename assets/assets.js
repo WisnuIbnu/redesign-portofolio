@@ -49,6 +49,7 @@ import larana_app from '../assets/Portofolio/larana-app.png';
 import saddam_app from '../assets/Portofolio/sadam.png';
 import prediksi_cuaca from '../assets/Portofolio/Prediksi-cuaca.png';
 import almatsurat from '../assets/Portofolio/almatsurat-api.png';
+import taskManager from '../assets/Portofolio/task-manager.png';
 
 export const assets = {
     user_image,
@@ -102,10 +103,18 @@ export const assets = {
     saddam_app,
     prediksi_cuaca,
     almatsurat,
-    larana_app
+    larana_app,
+    taskManager,
 };
 
 export const workData = [
+  {
+    title: 'TaskOrganizer',
+    categories: 'MERN Stack',
+    description: 'TaskOrganizer is a private project built with the MERN stack (MongoDB, Express.js, React.js, Node.js) for managing daily tasks efficiently. It features user authentication, CRUD operations for tasks, and a responsive UI. The app allows users to create, update, and delete tasks, set priorities, and track progress, making personal productivity management simple and effective. New feature: Sends H-1 task notifications via Gmail to remind users of upcoming tasks.',
+    bgImage: taskManager,
+    demoUrl: 'https://task-manager-app-orpin-eta.vercel.app/',
+  },
   {
     title: 'Larana Resto',
     categories: 'Front-End',
@@ -126,17 +135,17 @@ export const workData = [
     description: 'A Quran application is a digital platform that provides access to the Quran, the holy book of Islam. It typically includes features such as text display, audio recitation, translation, and search functionality. The app aims to facilitate reading, understanding, and memorizing the Quran for users worldwide.',
     bgImage: quranApp,
     demoUrl: 'https://quran-app-navy.vercel.app/',
-  },
-  {
-    title: 'SewaCar.id',
-    categories : 'Frond-End',
-    description: 'A final project of subject perancangan antarmuka pengguna is a car rental website that allows users to easily rent cars online. The website is designed to provide a user-friendly experience, with features such as car selection, booking, and payment processing. It aims to simplify the car rental process and enhance customer convenience.',
-    bgImage: sewaId,
-    demoUrl: 'https://sewa-car.vercel.app/',
-  },
+  }
 ];
 
 export const workDataS = [
+    {
+    title: 'TaskOrganizer',
+    categories: 'MERN Stack',
+    description: 'TaskOrganizer is a private project built with the MERN stack (MongoDB, Express.js, React.js, Node.js) for managing daily tasks efficiently. It features user authentication, CRUD operations for tasks, and a responsive UI. The app allows users to create, update, and delete tasks, set priorities, and track progress, making personal productivity management simple and effective. New feature: Sends H-1 task notifications via Gmail to remind users of upcoming tasks.',
+    bgImage: taskManager,
+    demoUrl: 'https://task-manager-app-orpin-eta.vercel.app/',
+  },
   {
     title: 'Larana Resto',
     categories: 'Front-End',
