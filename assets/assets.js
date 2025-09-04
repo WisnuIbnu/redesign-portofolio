@@ -283,7 +283,7 @@ export const experienceData = [
     {
         title: 'Faculty Of Computer Science (FILKOM UB)',
         position: 'Practicum Assistant Of Java Object Oriented Programming',
-        duration: 'Feb 2025 - Now',
+        duration: 'Feb 2025 - Jun 2025',
         description: [
             'Taught practicum sessions for courses Object Oriented Programming',
             'Taught 33 students about Java Object Oriented Programming',
@@ -310,6 +310,17 @@ export const experienceData = [
             'Networking Opportunities: Connect with a community of accomplished students, professional mentors, and collaboration opportunities.',
         ],
         logo: assets.lps
+    },
+    {
+        title: 'Faculty Of Computer Science (FILKOM UB)',
+        position: 'Practicum Assistant Of Web Programming',
+        duration: 'Aug 2025 - Now',
+        description: [
+            'Taught practicum sessions for courses Web Programming',
+            'Taught 32 students about Web Programming',
+            'Conducted practicum sessions and provided practicum feedback and assessment'
+        ],
+        logo: assets.filkom_logo 
     },
 ];
 
