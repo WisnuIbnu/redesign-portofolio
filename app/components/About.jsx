@@ -59,7 +59,7 @@ const About = () => {
             <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0 group-active:translate-y-0">
               <h1 className="font-dm text-3xl font-bold text-white">Wisnu Ibnu Muttaqiem</h1>
               <p className="mb-3 text-2xl italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-active:opacity-100">Student At University Brawijaya | Front - End Developer.</p>
-              <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">See More</button>
+              <a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/wisnuibnuuu?igsh=MXgxam44dGs0bHFkcQ%3D%3D" className='rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60'>See More</a>
             </div>
           </div>
         </motion.div>

@@ -201,14 +201,7 @@ export const workDataS = [
     description: 'My responsibility in this project is to develop API for two websites. This is the final assignment of the Integrated System Technology course. These APIs support various functions and ensure smooth communication between the front-end and back-end systems.',
     bgImage: '/Portofolio/API-Project.png',
     demoUrl: 'https://example.com/photography-portfolio',
-  },
-  //  {
-  //   title: 'Larana Reto',
-  //   categories : 'Frond-End',
-  //   description: 'Larana Reto is a website that provides a platform for users to share and discover various types of content, such as articles, images, and videos. The website is designed to be user-friendly and visually appealing, with features that allow users to easily navigate and interact with the content. It aims to create a community where users can connect and engage with each other through shared interests.',
-  //   bgImage: larana_app,
-  //   demoUrl: 'https://kantinq.vercel.app/',
-  // },
+  }
 ];
 
 export const serviceData = [
@@ -219,9 +212,9 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Laravel' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript, Php, Typescript, React Js, Next Js, Laravel' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 6 projects' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 9 projects' }
 ];
 
 export const toolsData = [
