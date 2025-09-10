@@ -20,7 +20,7 @@ const cardVariants = {
 const Contact = () => {
 
   const socialMedia = [
-    { name: 'WhatsApp', icon: faWhatsapp, account: 'Wisnu Ibnu', color: '#0ebe31', link: 'https://api.whatsapp.com/send/?phone=6285893953426&text=Halo%2C%20saya%20tertarik%20untuk%20berbicara%20lebih%20lanjut%21', massage: 'Send Me A Massage' },
+    { name: 'WhatsApp', icon: faWhatsapp, account: 'Wisnu Ibnu', color: '#0ebe31', link: 'https://api.whatsapp.com/send/?phone=62881011912484&text=Halo%2C%20saya%20tertarik%20untuk%20berbicara%20lebih%20lanjut%21', massage: 'Send Me A Massage' },
     { name: 'Email', icon: faEnvelope, account: 'wisnuiben21@gmail.com', color: '#a7061e', link: 'https://mail.google.com/mail/u/0/?fs=1&to=wisnuiben21@gmail.com&su=Your%20Subject&body=Your%20Messages&tf=cm', massage: 'Send Me A Massage' },
     { name: 'Instagram', icon: faInstagram, account: 'wisnuibnuuu', color: '#a7061e', link: 'https://www.instagram.com/wisnuibnuuu?igsh=MXgxam44dGs0bHFkcQ%3D%3D', massage: 'Send Me A Massage' },
   ];
