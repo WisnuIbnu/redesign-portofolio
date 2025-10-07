@@ -50,6 +50,7 @@ import saddam_app from '../assets/Portofolio/sadam.png';
 import prediksi_cuaca from '../assets/Portofolio/Prediksi-cuaca.png';
 import almatsurat from '../assets/Portofolio/almatsurat-api.png';
 import taskManager from '../assets/Portofolio/task-manager.png';
+import moneyTracker from '../assets/Portofolio/money-tracking.png';
 
 export const assets = {
     user_image,
@@ -105,9 +106,17 @@ export const assets = {
     almatsurat,
     larana_app,
     taskManager,
+    moneyTracker,
 };
 
 export const workData = [
+  {
+    title: 'FinFlow App',
+    categories: 'React Native',
+    description: 'FinFlow (Financial Flow) is a personal finance tracking app that helps users track income and expenses to make financial management easier. Key features include daily transaction recording, category grouping (food, transportation, bills, entertainment), weekly or monthly report summaries, financial visualization charts, and a budgeting feature to limit spending by category. With a simple and informative interface, the Money Tracker App is a practical solution for managing finances efficiently and effectively.',
+    bgImage: moneyTracker,
+    demoUrl: 'https://github.com/WisnuIbnu',
+  },
   {
     title: 'TaskOrganizer',
     categories: 'MERN Stack',
@@ -129,17 +138,17 @@ export const workData = [
     bgImage: almatsurat,
     demoUrl: 'https://almatsurat-fawn.vercel.app/',
   },
-  {
-    title: 'Quran App',
-    categories : 'Frond-End',
-    description: 'A Quran application is a digital platform that provides access to the Quran, the holy book of Islam. It typically includes features such as text display, audio recitation, translation, and search functionality. The app aims to facilitate reading, understanding, and memorizing the Quran for users worldwide.',
-    bgImage: quranApp,
-    demoUrl: 'https://quran-app-navy.vercel.app/',
-  }
 ];
 
 export const workDataS = [
-    {
+  {
+    title: 'FinFlow App',
+    categories: 'React Native',
+    description: 'FinFlow (Financial Flow) is a personal finance tracking app that helps users track income and expenses to make financial management easier. Key features include daily transaction recording, category grouping (food, transportation, bills, entertainment), weekly or monthly report summaries, financial visualization charts, and a budgeting feature to limit spending by category. With a simple and informative interface, the Money Tracker App is a practical solution for managing finances efficiently and effectively.',
+    bgImage: moneyTracker,
+    demoUrl: 'https://github.com/WisnuIbnu',
+  },
+  {
     title: 'TaskOrganizer',
     categories: 'MERN Stack',
     description: 'TaskOrganizer is a private project built with the MERN stack (MongoDB, Express.js, React.js, Node.js) for managing daily tasks efficiently. It features user authentication, CRUD operations for tasks, and a responsive UI. The app allows users to create, update, and delete tasks, set priorities, and track progress, making personal productivity management simple and effective. New feature: Sends H-1 task notifications via Gmail to remind users of upcoming tasks.',
