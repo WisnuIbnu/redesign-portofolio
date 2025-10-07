@@ -42,13 +42,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       variants={fadeIn}
       className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
     >
-      {/* Background overlay dengan transparansi 50% */}
+      
       <div 
         className="absolute inset-0 backdrop-blur-sm transition-opacity duration-500"
         onClick={onClose}
       />
       
-      {/* Modal container dengan animasi scale */}
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
         animate={isOpen ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 0 }}
@@ -69,7 +68,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             onClick={onClose}
             className="group absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-all duration-200"
           >
-            {/* svg tetap seperti di atas */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-black transition-transform duration-200 hover:rotate-90"
@@ -87,7 +85,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           </button>
         </div>
 
-        {/* Konten dengan efek fade-in */}
         <div className="p-6 md:p-8">
           <div className=" space-y-4">
             <h2 className="text-3xl font-bold mb-2 ">
@@ -200,7 +197,6 @@ const Portofolio = () => {
               viewport={{ once: true, amount: 0.2 }}
               custom={index * 0.2 + 0.5}
             >
-              {/* Gambar background */}
               <Image
                 src={project.bgImage}
                 alt={project.title || 'Project image'}
@@ -209,10 +205,9 @@ const Portofolio = () => {
                 priority
               />
 
-              {/* Gradient overlay */}
               <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
 
-              {/* Content card */}
+
               <div className={`${bgCard} w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 transition-all hover:shadow-xl`}>
                 <div>
                   <h2 className='font-semibold group-hover:text-lime-600 transition-colors duration-300'>{project.title}</h2>

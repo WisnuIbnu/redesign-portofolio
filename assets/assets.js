@@ -51,6 +51,7 @@ import prediksi_cuaca from '../assets/Portofolio/Prediksi-cuaca.png';
 import almatsurat from '../assets/Portofolio/almatsurat-api.png';
 import taskManager from '../assets/Portofolio/task-manager.png';
 import moneyTracker from '../assets/Portofolio/money-tracking.png';
+import portfolio from '../assets/Portofolio/portofolio.png';
 
 export const assets = {
     user_image,
@@ -107,6 +108,7 @@ export const assets = {
     larana_app,
     taskManager,
     moneyTracker,
+    portfolio
 };
 
 export const workData = [
@@ -175,6 +177,13 @@ export const workDataS = [
     description: 'A Quran application is a digital platform that provides access to the Quran, the holy book of Islam. It typically includes features such as text display, audio recitation, translation, and search functionality. The app aims to facilitate reading, understanding, and memorizing the Quran for users worldwide.',
     bgImage: quranApp,
     demoUrl: 'https://quran-app-navy.vercel.app/quran',
+  },
+  {
+    title: 'Portofolio',
+    categories : 'Frond-End',
+    description: "This is a personal portfolio website I developed to showcase my work, experience, and development projects in the technology field. It's designed with a modern and responsive design using the React framework and a clean UI for ease of access across various devices. Through this site, visitors can learn more about my profile, view project results, and access various information related to web and app development work I have done.",
+    bgImage: portfolio,
+    demoUrl: 'https://wisnuibnu-dev.vercel.app/',
   },
   {
     title: 'SewaCar.id',
