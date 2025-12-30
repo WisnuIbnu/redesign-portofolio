@@ -52,6 +52,7 @@ import almatsurat from '../assets/Portofolio/almatsurat-api.png';
 import taskManager from '../assets/Portofolio/task-manager.png';
 import moneyTracker from '../assets/Portofolio/money-tracking.png';
 import portfolio from '../assets/Portofolio/portofolio.png';
+import smkn5 from '../assets/Portofolio/smkn5.png'
 
 export const assets = {
     user_image,
@@ -108,10 +109,18 @@ export const assets = {
     larana_app,
     taskManager,
     moneyTracker,
-    portfolio
+    portfolio,
+    smkn5
 };
 
 export const workData = [
+  {
+    title: 'SMKN5',
+    categories: 'MERN STACK',
+    description: `Capstone Project — Project Manager SMKN5 Malang (MERN Stack). Aplikasi ini memungkinkan manajemen workspace, project, dan task dengan autentikasi menggunakan email dan akun google, Role-Based Access Control (RBAC), filtering, pagination, dan analytics. Dibangun menggunakan MongoDB, Express.js, React.js, Node.js, Axios, dan TypeScript, serta dideploy di Vercel.`,
+    bgImage: smkn5,
+    demoUrl: 'https://smkn5-malang.vercel.app/',
+  },
   {
     title: 'FinFlow App',
     categories: 'React Native',
@@ -127,13 +136,6 @@ export const workData = [
     demoUrl: 'https://task-manager-app-orpin-eta.vercel.app/',
   },
   {
-    title: 'Larana Resto',
-    categories: 'Front-End',
-    description: 'Larana Resto is a restaurant website developed as the final project for the Perancangan Antarmuka Pengguna (PAP) course. It allows users to browse menus, place orders, and view restaurant information. The site is designed for a seamless and visually appealing user experience, with responsive layouts and intuitive navigation. Features include menu browsing, order placement, and contact information.',
-    bgImage: larana_app,
-    demoUrl: 'https://larana-resto.vercel.app/',
-  },
-  {
     title: 'Al-Matsurat API',
     categories : 'API-Next.JS',
     description: 'Al-Matsurat API is a web service that provides access to the Al-Matsurat prayer book, which contains daily prayers and supplications for Muslims. This API allows developers to integrate Al-Matsurat content into their applications, enabling users to access and read the prayers conveniently.',
@@ -143,6 +145,13 @@ export const workData = [
 ];
 
 export const workDataS = [
+    {
+    title: 'SMKN5',
+    categories: 'MERN STACK',
+    description: `Capstone Project — Project Manager SMKN5 Malang (MERN Stack). Aplikasi ini memungkinkan manajemen workspace, project, dan task dengan autentikasi menggunakan email dan akun google, Role-Based Access Control (RBAC), filtering, pagination, dan analytics. Dibangun menggunakan MongoDB, Express.js, React.js, Node.js, Axios, dan TypeScript, serta dideploy di Vercel.`,
+    bgImage: smkn5,
+    demoUrl: 'https://smkn5-malang.vercel.app/',
+  },
   {
     title: 'FinFlow App',
     categories: 'React Native',
