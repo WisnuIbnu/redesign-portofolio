@@ -42,7 +42,7 @@ import bem_filkom_logo from './bem.png';
 import raja_brawijaya_logo from './raja2.png';
 import lotte_scholarship_logo from './lotte.png';
 import filkom_logo from './fil-removebg-preview.png';
-import lps from './lps.png';
+import lps from './lps.svg';
 import sewaId from '../assets/Portofolio/sewa-id.png'
 import quranApp from '../assets/Portofolio/quran-app.png';
 import larana_app from '../assets/Portofolio/larana-app.png';
@@ -54,6 +54,8 @@ import moneyTracker from '../assets/Portofolio/money-tracking.png';
 import portfolio from '../assets/Portofolio/portofolio.png';
 import smkn5 from '../assets/Portofolio/smkn5.png';
 import simita from '../assets/Portofolio/simita.png';
+import seniReligi from '../assets/SR.png';
+import diskominfo from '../assets/diskominfo.png';
 
 export const assets = {
     user_image,
@@ -113,6 +115,8 @@ export const assets = {
     portfolio,
     smkn5,
     simita,
+    seniReligi,
+    diskominfo
 };
 
 export const workData = [
@@ -121,7 +125,7 @@ export const workData = [
     categories: 'Laravel - Filament',
     description: `SIMITA — Sistem Informasi Inventaris OPD (Project PKL Diskominfo Nganjuk). Aplikasi web ini digunakan untuk mengelola data inventaris barang pada setiap Dinas/OPD dengan konsep Role-Based Access Control (RBAC) sehingga setiap pengguna hanya dapat mengakses data sesuai kewenangannya. Fitur mencakup manajemen inventaris, scan QR Code, laporan PDF/Excel, grafik tren data, dan manajemen pengguna/admin. Dibangun menggunakan PHP, Laravel 10, Filament 3, Laravel Sanctum, MySQL.`,
     bgImage: simita,
-    demoUrl: 'https://github.com/WisnuIbnu/inventory-opd-ngajuk-app',
+    demoUrl: 'https://simita.nganjukkab.go.id/',
   },
   {
     title: 'SMKN5',
@@ -152,7 +156,7 @@ export const workDataS = [
     categories: 'Laravel - Filament',
     description: `SIMITA — Inventory Information System for Regional Apparatus Organizations (OPD) in Nganjuk Regency, East Java. This web application is used to manage inventory data for each Department/OPD using the Role-Based Access Control (RBAC) concept so that each user can only access data according to their authority. Features include inventory management, QR Code scanning, PDF/Excel reports, data trend graphs, and user/admin management. Built using PHP, Laravel 10, Filament 3, Laravel Sanctum, MySQL.`,
     bgImage: simita,
-    demoUrl: 'https://github.com/WisnuIbnu/inventory-opd-ngajuk-app',
+    demoUrl: 'https://simita.nganjukkab.go.id/',
   },
   {
     title: 'SMKN5',
@@ -323,7 +327,7 @@ export const experienceData = [
     {
         title: 'ROBOTIIK 2025 (FILKOM UB)',
         position: 'General Secretary 2',
-        duration: 'Feb 2025 - Now',
+        duration: 'Feb 2025 - Dec 2025',
         description: [
             'Managed administrative needs including organizational inventory, documents, records, and archives',
             'Managed the submission of work program administration documents, including proposals, accountability reports, final activity reports, letters, etc'
@@ -343,13 +347,33 @@ export const experienceData = [
     {
         title: 'Faculty Of Computer Science (FILKOM UB)',
         position: 'Practicum Assistant Of Web Programming',
-        duration: 'Aug 2025 - Now',
+        duration: 'Aug 2025 - Dec 2025',
         description: [
             'Taught practicum sessions for courses Web Programming',
             'Taught 32 students about Web Programming',
             'Conducted practicum sessions and provided practicum feedback and assessment'
         ],
         logo: assets.filkom_logo 
+    },
+    {
+        title: 'Seni Religi UB 2026',
+        position: 'General Secretary 1',
+        duration: 'Januari 2026 - Present',
+        description: [
+            'Managed administrative needs including organizational inventory, documents, records, and archives',
+            'Managed the submission of work program administration documents, including proposals, accountability reports, final activity reports, letters, etc'
+        ],
+        logo: assets.seniReligi
+    },
+    {
+        title: 'Diskominfo Ngajuk',
+        position: 'Web Development Intership',
+        duration: 'Dec 2025 - Jan 2026',
+        description: [
+            'Developed SIMITA — OPD Inventory Information System using Laravel 10 and Filament 3.',
+            ' Created features including inventory management, QR code scanning, PDF/Excel reports, data trend graphs, user/admin management, and product usage based on transaction'
+        ],
+        logo: assets.diskominfo
     },
 ];
 

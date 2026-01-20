@@ -108,9 +108,7 @@ const Experiences = () => {
                           <Image 
                             src={experience.logo} 
                             alt={experience.title}
-                            width={300}
-                            height={300}
-                            className="object-contain p-4 mt-10"
+                            className="object-contain p-4 mt-10 w-auto h-40"
                           />
                         )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
