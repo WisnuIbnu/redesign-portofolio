@@ -155,7 +155,7 @@ const Portofolio = () => {
       className='w-full px-[12%] py-12 scroll-m-20'
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={fadeIn}
     >
       <motion.h4

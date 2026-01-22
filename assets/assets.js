@@ -56,6 +56,8 @@ import smkn5 from '../assets/Portofolio/smkn5.png';
 import simita from '../assets/Portofolio/simita.png';
 import seniReligi from '../assets/SR.png';
 import diskominfo from '../assets/diskominfo.png';
+import ApiProject from '../assets/Portofolio/API-Project.png';
+import FrondEnd from '../assets/Portofolio/Front-end.png';
 
 export const assets = {
     user_image,
@@ -105,7 +107,6 @@ export const assets = {
     lps,
     sewaId,
     quranApp,
-    larana_app,
     saddam_app,
     prediksi_cuaca,
     almatsurat,
@@ -116,7 +117,9 @@ export const assets = {
     smkn5,
     simita,
     seniReligi,
-    diskominfo
+    diskominfo,
+    ApiProject,
+    FrondEnd,
 };
 
 export const workData = [
@@ -232,14 +235,14 @@ export const workDataS = [
     title: 'TravelingYuk',
     categories : 'Front-End',
     description: 'I am responsible for designing an attractive, responsive, and aesthetic front-end. This is the final project of the PHP Website Programming course, with a focus on modern appearance and ease of navigation for users. I also ensure that the visual elements support the overall functionality of the site.',
-    bgImage: '/Portofolio/Front-end.png',
+    bgImage: ApiProject,
     demoUrl: 'https://github.com/AlViToo07/Hilinggg',
   },
   {
     title: 'FIA.ID',
     categories : 'API',
     description: 'My responsibility in this project is to develop API for two websites. This is the final assignment of the Integrated System Technology course. These APIs support various functions and ensure smooth communication between the front-end and back-end systems.',
-    bgImage: '/Portofolio/API-Project.png',
+    bgImage: FrondEnd,
     demoUrl: 'https://example.com/photography-portfolio',
   }
 ];
