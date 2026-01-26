@@ -34,10 +34,10 @@ const Header = () => {
         Hi! I'm Wisnu Ibnu <Image src={assets.hand_icon} alt='' className='w-6' />
       </motion.h3>
       <motion.h1 className='text-3xl md:text-6xl lg:text-[66px] font-Ovo' variants={fadeInUp} custom={3}>
-        A Frontend Developer Based in Indonesia
+        A Full Stack Developer Based in Indonesia
       </motion.h1>
       <motion.p className='max-w-2xl mx-auto font-Ovo' variants={fadeInUp} custom={4}>
-        I am a frontend developer with a passion for creating beautiful and functional web applications.
+        I am a Full Stack developer with a passion for creating beautiful and functional web applications.
       </motion.p>
       <motion.div className='flex flex-col sm:flex-row items-center gap-4 mt-4' variants={fadeInUp} custom={5}>
         <a
