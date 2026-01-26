@@ -1,6 +1,6 @@
 'use client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faWhatsapp, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
@@ -17,12 +17,13 @@ const cardVariants = {
   })
 }
 
+
 const Contact = () => {
 
   const socialMedia = [
     { name: 'WhatsApp', icon: faWhatsapp, account: 'Wisnu Ibnu', color: '#0ebe31', link: 'https://api.whatsapp.com/send/?phone=62881011912484&text=Halo%2C%20saya%20tertarik%20untuk%20berbicara%20lebih%20lanjut%21', massage: 'Send Me A Massage' },
     { name: 'Email', icon: faEnvelope, account: 'wisnuiben21@gmail.com', color: '#a7061e', link: 'https://mail.google.com/mail/u/0/?fs=1&to=wisnuiben21@gmail.com&su=Your%20Subject&body=Your%20Messages&tf=cm', massage: 'Send Me A Massage' },
-    { name: 'Instagram', icon: faInstagram, account: 'wisnuibnuuu', color: '#a7061e', link: 'https://www.instagram.com/wisnuibnuuu?igsh=MXgxam44dGs0bHFkcQ%3D%3D', massage: 'Send Me A Massage' },
+    { name: 'LinkedIn', icon: faLinkedin, account: 'Wisnu Ibnu', color: '#1c5c8d', link: 'https://www.linkedin.com/in/wisnu-ibnu-103945289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', massage: 'Connect With Me' },
   ];
 
   const { theme } = useContext(ThemeContext)
@@ -51,11 +52,11 @@ const Contact = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               <div className="flex items-center gap-3 gap-y-3">
-                <a href={link}><FontAwesomeIcon icon={icon} style={{ color: color }} className="text-6xl" /></a>
+                <a href={link}><FontAwesomeIcon target='_blank' rel="noopener noreferrer" icon={icon} style={{ color: color }} className="text-6xl"/></a>
                 <div className="block gap-y-3">
-                  <a href={link}><h2 className="font-bold text-xl">{name}</h2></a>
-                  <a href={link}><p className="text-md">{account}</p></a>
-                  <a href={link} target="_blank" className="text-blue-500 font-semibold" rel="noopener noreferrer">{massage}</a>
+                  <a href={link} target='_blank' rel="noopener noreferrer"><h2 className="font-bold text-xl">{name}</h2></a>
+                  <a href={link} target='_blank' rel="noopener noreferrer"><p className="text-md">{account}</p></a>
+                  <a href={link} target='_blank' rel="noopener noreferrer" className="text-blue-500 font-semibold">{massage}</a>
                 </div>
               </div>
             </motion.div>

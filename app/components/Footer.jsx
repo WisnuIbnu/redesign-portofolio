@@ -29,7 +29,7 @@ const Footer = () => {
         <p>© {new Date().getFullYear()} Wisnu Ibnu. All right reserved.</p>
         <ul className='flex gap-10 mt-4 items-center justify-center sm:mt-0'>
           <li><a target='_blank' href="https://github.com/WisnuIbnu" rel="noopener noreferrer">Github</a></li>
-          <li><a target='_blank' href="https://github.com/WisnuIbnu" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a target='_blank' href="https://www.linkedin.com/in/wisnu-ibnu-103945289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" rel="noopener noreferrer">LinkedIn</a></li>
           <li><a target='_blank' href="https://github.com/WisnuIbnu" rel="noopener noreferrer">X</a></li>
         </ul>
       </div>
