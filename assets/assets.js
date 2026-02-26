@@ -58,6 +58,8 @@ import seniReligi from '../assets/SR.png';
 import diskominfo from '../assets/diskominfo.png';
 import ApiProject from '../assets/Portofolio/API-Project.png';
 import FrondEnd from '../assets/Portofolio/Front-end.png';
+import dafidea from '../assets/dafidea.webp';
+import sekawanmedia from '../assets/sekawamedia.png';
 
 export const assets = {
     user_image,
@@ -120,6 +122,8 @@ export const assets = {
     diskominfo,
     ApiProject,
     FrondEnd,
+    dafidea,
+    sekawanmedia
 };
 
 export const workData = [
@@ -377,6 +381,36 @@ export const experienceData = [
             ' Created features including inventory management, QR code scanning, PDF/Excel reports, data trend graphs, user/admin management, and product usage based on transaction'
         ],
         logo: assets.diskominfo
+    },
+    {
+        title: 'Dafidea Kreasi Technology',
+        position: 'Quality Assurance Intership',
+        duration: 'Jan 2026 - Present',
+        description: [
+            'Conducted testing and quality assurance for web and mobile applications to ensure functionality, usability, and performance.',
+            'Collaborated with development teams to identify and resolve issues, contributing to the improvement of product quality and user experience.'
+        ],
+        logo: assets.dafidea
+    },
+    {
+        title: 'PT. Sekawan Media',
+        position: 'Fullstack Developer Intership',
+        duration: 'Jan 2026 - Present',
+        description: [
+            'Maintained and enhanced existing web applications, ensuring optimal performance and user experience. with Modullar & service pattern, and implemented new features based on client requirements.',
+        ],
+        logo: assets.sekawanmedia
+    },
+    {
+        title: 'Faculty Of Computer Science (FILKOM UB)',
+        position: 'Practicum Assistant Of User Interface Designing',
+        duration: 'Jan 2026 - Present',
+        description: [
+            'Taught practicum sessions for courses User Interface Designing',
+            'Taught 42 students about User Interface Designing',
+            'Conducted practicum sessions and provided practicum feedback and assessment'
+        ],
+        logo: assets.filkom_logo 
     },
 ];
 
